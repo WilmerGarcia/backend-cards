@@ -8,7 +8,7 @@ export class LoggerService {
   private logFiles = {
     http: path.join(this.logDir, 'http-requests.log'),
     database: path.join(this.logDir, 'database.log'),
-    errors: path.join(this.logDir, 'errors.log'),
+    error: path.join(this.logDir, 'error.log'),
   };
 
   constructor() {

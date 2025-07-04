@@ -3,7 +3,7 @@ import * as knex from 'knex';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot()], // Esto carga el archivo .env
+  imports: [ConfigModule.forRoot()],
   providers: [
     {
       provide: 'KNEX_CONNECTION',

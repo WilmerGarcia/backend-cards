@@ -13,6 +13,7 @@ import {
   Put,
   Delete,
 } from '@nestjs/common';
+import { AuthRequired } from 'src/common/decorators/uth.decorator';
 @ApiTags('cards')
 @UseInterceptors(ConnectionInterceptor)
 @Controller('cards')
@@ -20,6 +21,7 @@ export class CardController {
   constructor(private readonly cardService: CardService) {}
 
   @Post()
+  @AuthRequired()
   @ApiOperation({ summary: 'Crear una tarjeta con varias descripciones' })
   async createCard(@Body() createCard: CreateCardDto) {
     const response = await this.cardService.createCard(createCard);
@@ -27,6 +29,7 @@ export class CardController {
   }
 
   @Get()
+  @AuthRequired()
   @ApiOperation({ summary: 'Obtener todas las tarjetas con sus descripciones' })
   async getAllCards(
     @Query('page') page: number = 1,
@@ -37,6 +40,7 @@ export class CardController {
   }
 
   @Get(':id')
+  @AuthRequired()
   @ApiOperation({ summary: 'Obtener una tarjeta por su ID' })
   async getCardById(@Param('id') id: number) {
     const response = await this.cardService.getCardById(id);
@@ -44,6 +48,7 @@ export class CardController {
   }
 
   @Put(':id')
+  @AuthRequired()
   @ApiOperation({ summary: 'Actualizar una tarjeta con varias descripciones' })
   async updateCard(@Param('id') id: number, @Body() updateCard: UpdateCardDto) {
     const response = await this.cardService.updateCard(id, updateCard);
@@ -51,6 +56,7 @@ export class CardController {
   }
 
   @Delete(':id')
+  @AuthRequired()
   @ApiOperation({ summary: 'Eliminar una tarjeta y sus descripciones' })
   async deleteCard(@Param('id') id: number) {
     const response = await this.cardService.deleteCard(id);
