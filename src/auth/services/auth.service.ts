@@ -148,6 +148,7 @@ export class AuthService {
       this.logger.log(`Login exitoso para el usuario: ${username}`, 'database');
       return createResponse(ResponseStatus.SUCCESS, 'Login exitoso', {
         token,
+        user: userWithRole
       });
     } catch (error) {
       await trx.rollback();
