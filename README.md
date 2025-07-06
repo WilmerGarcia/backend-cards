@@ -43,13 +43,13 @@ src/
 ├── database/     → Configuración de la base de datos
 ├── app.module.ts → Módulo principal del proyecto
 ├── main.ts       → Punto de entrada de la aplicación
+
+
 ```txt
-
-
 Como clonar el repositorio:
 ```txt
 git clone <url-del-repositorio>
-```txt
+
 
 Crea tu .env utilizando .env.example como base
 
