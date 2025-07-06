@@ -13,6 +13,10 @@ Requisitos técnicos:
 - NestJS CLI  
 - TypeScript
 
+```txt
+Como clonar el repositorio:
+git clone <url-del-repositorio>
+
 Instalar dependencias:
 
 ```bash
@@ -43,10 +47,6 @@ src/
 ├── database/     → Configuración de la base de datos
 ├── app.module.ts → Módulo principal del proyecto
 ├── main.ts       → Punto de entrada de la aplicación
-
-
-Como clonar el repositorio:
-git clone <url-del-repositorio>
 
 
 Crea tu .env utilizando .env.example como base
