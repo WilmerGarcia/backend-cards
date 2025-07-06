@@ -16,6 +16,7 @@ Requisitos técnicos:
 ```txt
 Como clonar el repositorio:
 git clone <url-del-repositorio>
+```
 
 Instalar dependencias:
 
