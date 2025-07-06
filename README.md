@@ -35,6 +35,7 @@ npm run start:prod
 ```
 
 Estructura del proyecto:
+```txt
 src/
 ├── auth/         → Módulo de autenticación
 ├── card/         → Módulo para gestión de tarjetas
@@ -42,12 +43,15 @@ src/
 ├── database/     → Configuración de la base de datos
 ├── app.module.ts → Módulo principal del proyecto
 ├── main.ts       → Punto de entrada de la aplicación
+```txt
 
 
 Como clonar el repositorio:
+```txt
 git clone <url-del-repositorio>
+```txt
 
-crea tu .env utilizando .env.example como base
+Crea tu .env utilizando .env.example como base
 
 La dirección para ver la documentación de apis con swagger es: /api
 por ejemplo: http://localhost:3001/api
